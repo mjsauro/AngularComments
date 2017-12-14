@@ -18,8 +18,8 @@
                     <div class="title">{{post.title}} <span class="pull-right">Upvotes: {{post.upvotes}}</span></div>
                 </div>
                 <div class="panel-body">
-                    <div ng-repeat="comment in post.comments">
-                        <p>{{comment.body}} <span class="glyphicon glyphicon-plus-sign pull-right" ng-click="upVote($index)">Upvotes:  {{comment.upvotes}}</span></p>
+                    <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
+                        <p>{{comment.body}} <span class="glyphicon glyphicon-plus-sign pull-right " ng-click="upVoteComment($index) ">Upvotes:  {{comment.upvotes}}</span></p>
 
                     </div>
                 </div>
