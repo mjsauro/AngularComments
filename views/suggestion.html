@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <form ng-submit="addComment()">
+                <h3>Comments</h3>
+                <div class="form-group">
+                    <label for="comment">Comments</label>
+                    <input type="text" class="form-control" name="comment" ng-model="comment" placeholder="Enter your comments">
+                </div>
+                <button type="submit" class="btn btn-primary text-center">Submit!</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="title">{{post.title}} <span class="pull-right">Upvotes: {{post.upvotes}}</span></div>
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="comment in post.comments">
+                        <p>{{comment.body}} <span class="pull-right">Upvotes: {{comment.upvotes}}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
