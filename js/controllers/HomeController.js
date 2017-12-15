@@ -17,10 +17,5 @@ function ($scope, suggestions, upvote) {
         };
         $scope.upVote = upvote;
 
-        /*        $scope.upVote = function (post) {
-
-                    post.upvotes += 1;
-
-                };*/
         $scope.comments = [];
 }]);
