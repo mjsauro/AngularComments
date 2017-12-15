@@ -1,8 +1,8 @@
 app.controller('HomeController', [
 '$scope',
-'suggestions',
+'suggestions', 'upvote',
 
-function ($scope, suggestions) {
+function ($scope, suggestions, upvote) {
         $scope.posts = suggestions.posts;
         $scope.addSuggestion = function () {
             if (!$scope.title || $scope.title === "") {
@@ -15,10 +15,7 @@ function ($scope, suggestions) {
 
             $scope.title = "";
         };
-        $scope.upVote = function (index) {
+        $scope.upVote = upvote;
 
-            $scope.posts[index].upvotes += 1;
-
-        };
         $scope.comments = [];
 }]);
