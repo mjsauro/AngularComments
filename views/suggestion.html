@@ -15,7 +15,7 @@
         <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    <div class="title">{{post.title}} <span class="pull-right glyphicon glyphicon-plus-sign" ng-click="upVote($index)">Upvotes: {{post.upvotes}}</span></div>
+                    <div class="title">{{post.title}} <span class="pull-right glyphicon glyphicon-plus-sign" ng-click="upVote(post)">Upvotes: {{post.upvotes}}</span></div>
                 </div>
                 <div class="panel-body">
                     <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">

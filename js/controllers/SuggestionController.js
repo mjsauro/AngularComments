@@ -1,4 +1,4 @@
-app.controller("SuggestionController", ['$scope', '$routeParams', 'suggestions', function ($scope, $routeParams, suggestions) {
+app.controller("SuggestionController", ['$scope', '$routeParams', 'suggestions', 'upvote', function ($scope, $routeParams, suggestions, upvote) {
     $scope.post = suggestions.posts[$routeParams.id];
 
     $scope.addComment = function () {
@@ -13,5 +13,6 @@ app.controller("SuggestionController", ['$scope', '$routeParams', 'suggestions',
 
 
     };
+    $scope.upVote = upvote;
 
 }])
