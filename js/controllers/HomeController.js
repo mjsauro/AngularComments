@@ -16,6 +16,7 @@ function ($scope, suggestions) {
             $scope.title = "";
         };
         $scope.upVote = function (index) {
+
             $scope.posts[index].upvotes += 1;
 
         };
